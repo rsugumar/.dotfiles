@@ -78,6 +78,9 @@ hc keybind  XF86AudioMicMute spawn amixer set Capture toggle
 hc keybind  XF86MonBrightnessUp spawn xbacklight -inc 10
 hc keybind  XF86MonBrightnessDown spawn xbacklight -dec 10
 
+# bluetoothctl control (toggle)
+hc keybind  XF86MonBluetooth spawn "if rfkill -ro Soft list bluetooth|grep -q 'blocked$';then rfkill unblock bluetooth;else rfkill block bluetooth;fi"
+
 # screenshot
 hc keybind Print spawn scrot 'scrot_%Y-%m-%d-%S_$wx$h.png'
 
