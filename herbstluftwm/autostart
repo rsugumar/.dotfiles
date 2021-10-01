@@ -74,6 +74,10 @@ hc keybind XF86AudioMute spawn amixer -D pulse set Master toggle
 # mute/unmute microphone
 hc keybind  XF86AudioMicMute spawn amixer set Capture toggle
 
+# brightness adjustment control
+hc keybind  XF86MonBrightnessUp spawn xbacklight -inc 10
+hc keybind  XF86MonBrightnessDown spawn xbacklight -dec 10
+
 # screenshot
 hc keybind Print spawn scrot 'scrot_%Y-%m-%d-%S_$wx$h.png'
 
