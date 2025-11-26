@@ -1,0 +1,4 @@
+# docker aliases
+alias gofmt='docker run --rm -v $(pwd):/data cytopia/gofmt'
+alias bws='docker run --rm -it bitwarden/bws'
+alias gemini='docker run --rm -it us-docker.pkg.dev/gemini-code-dev/gemini-cli/sandbox:0.1.1'
